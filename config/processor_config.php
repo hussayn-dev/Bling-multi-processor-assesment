@@ -25,6 +25,7 @@ return [
         'paypal' => new \Bling\Assessment\Services\PaypalService,
         'stripe' => new \Bling\Assessment\Services\StripeService,
         'paystack'=> new \Bling\Assessment\Services\PaystackService,
+
     ],
 
     /*

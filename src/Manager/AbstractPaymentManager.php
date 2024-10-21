@@ -11,6 +11,7 @@ use Bling\Assessment\Models\PaymentAnalytics;
 abstract class AbstractPaymentManager implements PaymentContract
 {
     public PaymentContract|null $nextProvider = null;
+    public int $providerId;
 
     /**
      * @param PaymentRequest $params
@@ -21,12 +22,12 @@ abstract class AbstractPaymentManager implements PaymentContract
     {
         $this->savePaymentAnalyticsLog(
             reference: $params->reference,
-            providerId: $providerResponse->providerId,
+            providerId: $this->getProviderId(),
             status: $paymentResponse->status,
         );
 
         if ($paymentResponse->status->value != PaymentStatus::FAILED->value || !$this->nextProvider) {
-            return $providerResponse;
+            return $paymentResponse;
         }
 
         return $this->nextProvider->processPayment($params);
@@ -35,6 +36,16 @@ abstract class AbstractPaymentManager implements PaymentContract
     public function setNext(PaymentContract $paymentContract): void
     {
         $this->nextProvider = $paymentContract;
+    }
+
+    public function setProviderId(int $providerId): void
+    {
+        $this->providerId = $providerId;
+    }
+
+    public function getProviderId(): int
+    {
+        return $this->providerId;
     }
 
     protected function savePaymentAnalyticsLog(

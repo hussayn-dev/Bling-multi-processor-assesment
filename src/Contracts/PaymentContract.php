@@ -5,6 +5,7 @@ namespace Bling\Assessment\Contracts;
 
 use Bling\Assessment\Data\PaymentRequest;
 use Bling\Assessment\Data\PaymentResponse;
+
 interface PaymentContract
 {
     /**
@@ -22,4 +23,7 @@ interface PaymentContract
     public function processPayment(PaymentRequest $params): PaymentResponse;
 
     public function setNext(PaymentContract $paymentContract): void;
+
+    public function setProviderId(int $providerId): void;
+
 }

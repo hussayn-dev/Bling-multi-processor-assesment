@@ -4,11 +4,10 @@ namespace Bling\Assessment\Traits;
 
 
 use Bling\Assessment\Models\Processor;
-use Illuminate\Database\Eloquent\Collection;
 
 trait GetProcessor
 {
-    protected function getListOfProcessors(string $currency): Collection
+    protected function getListOfProcessors(string $currency): array
     {
         $processors = Processor::query()
             ->where('is_active', true)
@@ -21,18 +20,18 @@ trait GetProcessor
             $scoreB = ($b->reliability_score * 2) - $b->transaction_cost;
 
             return $scoreB <=> $scoreA;
-        });
-
+        })->toArray();
     }
-
 
     public function getProcessorClasses(array $processorNames): array
     {
         $processors = config("processor_config.processors");
 
-        // Filter the processor classes based on the given names
-        return array_map(function ($name) use ($processors) {
-            return $processors[$name] ?? null; // Return the class or null if not found
+        return array_map(function ($processor) use ($processors) {
+            return [
+                'id' => $processor->id,
+                'className' => $processors[$processor->name]
+            ];
         }, $processorNames);
     }
 

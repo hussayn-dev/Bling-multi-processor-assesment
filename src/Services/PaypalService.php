@@ -9,7 +9,6 @@ use Bling\Assessment\Manager\AbstractPaymentManager;
 
 class PaypalService extends AbstractPaymentManager
 {
-    protected int $providerId = 1;
     protected PayPalClient $paypalClient;
 
 

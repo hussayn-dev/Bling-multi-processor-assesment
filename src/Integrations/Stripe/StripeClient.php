@@ -5,14 +5,24 @@ namespace Bling\Assessment\Integrations\Stripe;
 
 class StripeClient
 {
-    public function fundPayment(array $params): array
+    public function fundPayment(array $params)
     {
-
-        return [
-            'status_code' => '00', // or other status codes like '0', '90', etc.
-            'message' => 'PaymentAnalytics processed successfully',
-            'transaction_id' => $response['data']['transaction_id'] ?? 'TX123456789',
+        $responses = [
+            [
+                'status' => 'success',
+                'message' => 'Transfer successful (stripe)',
+                'transaction_id' => 'TX123456789',
+            ],
+            [
+                'status' => 'failed',
+                'message' => 'Transfer failed (stripe)',
+                'transaction_id' => null,
+            ]
         ];
+        $pickedResponse = rand(0, 1);
 
+        return $responses[$pickedResponse];
     }
+
+
 }

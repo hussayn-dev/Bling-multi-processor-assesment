@@ -21,11 +21,6 @@ class PaymentProcessor
     {
         $this->validateCurrencies([$currency]);
         $processors = $this->getListOfProcessors($currency);
-        $processors = $processors->map(function ($processor) {
-            return [
-                'name' => $processor->name
-            ];
-        });
         $processors = $this->getProcessorClasses($processors);
 
         if (empty($processors)) {
@@ -56,23 +51,27 @@ class PaymentProcessor
      */
     protected function buildProviderChain(array $providers): void
     {
+
         for ($i = 0; $i < (count($providers) - 1); $i++) {
+            /** @var PaymentContract $providerClassName */
+            $providerClassName = $providers[$i]['className'];
+            $firstProviderId = $providers[$i]['id'];
+            $nextProviderId = $providers[$i + 1]['id'];
 
-            $provider = $providers[$i];
+            /** @var PaymentContract $providerClassName */
+            $nextProviderClassName = $providers[$i + 1]['className'];
 
-            if (!is_subclass_of($provider, AbstractPaymentManager::class)) {
+            if (!is_subclass_of($providerClassName, AbstractPaymentManager::class)) {
                 throw new PaymentServiceException(
                     sprintf(
                         "Provider %s is not a subclass of %s",
-                        get_class($provider),
+                        get_class($providerClassName),
                         AbstractPaymentManager::class
                     ));
             }
-
-            /**
-             * @var PaymentContract $provider
-             */
-            $provider->setNext($providers[$i + 1]);
+            $providerClassName->setProviderId($firstProviderId);
+            $nextProviderClassName->setProviderId($nextProviderId);
+            $providerClassName->setNext($nextProviderClassName);
         }
     }
 }
