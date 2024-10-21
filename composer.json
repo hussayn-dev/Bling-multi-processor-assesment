@@ -27,5 +27,7 @@
   },
   "scripts": {
     "phpstan": "vendor/bin/phpstan"
-  }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
