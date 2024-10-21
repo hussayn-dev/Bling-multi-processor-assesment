@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Bling\Assessment\Contracts;
+namespace HussDev\Assessment\Contracts;
 
 use HussDev\Assessment\Data\PaymentRequest;
 use HussDev\Assessment\Data\PaymentResponse;
