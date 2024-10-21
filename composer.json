@@ -25,6 +25,7 @@
     "league/iso3166": "^4.3",
     "ext-http": "*"
   },
+  
   "scripts": {
     "phpstan": "vendor/bin/phpstan"
   },
