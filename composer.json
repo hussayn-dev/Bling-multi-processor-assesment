@@ -1,28 +1,31 @@
 {
-    "name": "bling/assessment",
-    "description": "A composer package for multi processor routing",
-    "type": "package",
-    "autoload": {
-        "psr-4": {
-            "Bling\\Assessment\\": "src/"
-        },
-        "files": [
-            "src/helpers.php"
-        ]
+  "name": "bling/assessment",
+  "description": "A composer package for multi processor routing",
+  "type": "package",
+  "autoload": {
+    "psr-4": {
+      "Bling\\Assessment\\": "src/"
     },
-    "require-dev": {
-        "phpunit/phpunit": "^11.4",
-        "phpstan/phpstan": "^1.12"
-    },
-    "require": {
-        "php": "^8.0",
-        "illuminate/auth": "^8.12|^9.0|^10.0|^11.0",
-        "illuminate/container": "^8.12|^9.0|^10.0|^11.0",
-        "illuminate/contracts": "^8.12|^9.0|^10.0|^11.0",
-        "illuminate/database": "^8.12|^9.0|^10.0|^11.0",
-        "laravel/helpers": "^1.7",
-        "spatie/laravel-data": "^4.10",
-        "league/iso3166": "^4.3",
-        "ext-http": "*"
-    }
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.4",
+    "phpstan/phpstan": "^1.12"
+  },
+  "require": {
+    "php": "^8.0",
+    "illuminate/auth": "^8.12|^9.0|^10.0|^11.0",
+    "illuminate/container": "^8.12|^9.0|^10.0|^11.0",
+    "illuminate/contracts": "^8.12|^9.0|^10.0|^11.0",
+    "illuminate/database": "^8.12|^9.0|^10.0|^11.0",
+    "laravel/helpers": "^1.7",
+    "spatie/laravel-data": "^4.10",
+    "league/iso3166": "^4.3",
+    "ext-http": "*"
+  },
+  "scripts": {
+    "phpstan": "vendor/bin/phpstan"
+  }
 }
