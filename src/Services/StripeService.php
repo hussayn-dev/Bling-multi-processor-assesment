@@ -1,11 +1,11 @@
 <?php
 
-namespace Bling\Assessment\Services;
+namespace HussDev\Assessment\Services;
 
-use Bling\Assessment\Data\PaymentRequest;
-use Bling\Assessment\Data\PaymentResponse;
-use Bling\Assessment\Integrations\Stripe\StripeClient;
-use Bling\Assessment\Manager\AbstractPaymentManager;
+use HussDev\Assessment\Data\PaymentRequest;
+use HussDev\Assessment\Data\PaymentResponse;
+use HussDev\Assessment\Integrations\Stripe\StripeClient;
+use HussDev\Assessment\Manager\AbstractPaymentManager;
 
 class StripeService extends AbstractPaymentManager
 {

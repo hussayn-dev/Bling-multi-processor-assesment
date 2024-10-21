@@ -1,8 +1,8 @@
 <?php
 
-namespace Bling\Assessment\Data;
+namespace HussDev\Assessment\Data;
 
-use Bling\Assessment\Enums\PaymentStatus;
+use HussDev\Assessment\Enums\PaymentStatus;
 use Spatie\LaravelData\Data;
 
 

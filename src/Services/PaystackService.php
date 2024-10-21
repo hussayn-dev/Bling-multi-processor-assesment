@@ -1,16 +1,14 @@
 <?php
 
-namespace Bling\Assessment\Services;
+namespace HussDev\Assessment\Services;
 
-use Bling\Assessment\Data\PaymentRequest;
-use Bling\Assessment\Data\PaymentResponse;
-use Bling\Assessment\Integrations\PayStack\PayStackClient;
-use Bling\Assessment\Manager\AbstractPaymentManager;
+use HussDev\Assessment\Data\PaymentRequest;
+use HussDev\Assessment\Data\PaymentResponse;
+use HussDev\Assessment\Integrations\PayStack\PayStackClient;
+use HussDev\Assessment\Manager\AbstractPaymentManager;
 
 class PaystackService extends AbstractPaymentManager
 {
-
-    protected int $providerId = 2;
     protected PaystackClient $paystackClient;
 
     public function __construct()

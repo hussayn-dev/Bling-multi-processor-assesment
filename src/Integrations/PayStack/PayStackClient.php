@@ -1,6 +1,6 @@
 <?php
 
-namespace Bling\Assessment\Integrations\PayStack;
+namespace HussDev\Assessment\Integrations\PayStack;
 
 
 class PayStackClient

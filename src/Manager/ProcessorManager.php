@@ -1,9 +1,9 @@
 <?php
 
-namespace Bling\Assessment\Manager;
+namespace HussDev\Assessment\Manager;
 
-use Bling\Assessment\Models\Processor;
-use Bling\Assessment\Traits\ValidateCurrency;
+use HussDev\Assessment\Models\Processor;
+use HussDev\Assessment\Traits\ValidateCurrency;
 use Illuminate\Database\Eloquent\Collection;
 
 class ProcessorManager

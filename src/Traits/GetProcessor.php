@@ -1,9 +1,9 @@
 <?php
 
-namespace Bling\Assessment\Traits;
+namespace HussDev\Assessment\Traits;
 
 
-use Bling\Assessment\Models\Processor;
+use HussDev\Assessment\Models\Processor;
 
 trait GetProcessor
 {

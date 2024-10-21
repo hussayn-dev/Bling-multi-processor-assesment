@@ -1,6 +1,6 @@
 <?php
 
-namespace Bling\Assessment\Integrations\PayPal;
+namespace HussDev\Assessment\Integrations\PayPal;
 
 class PayPalClient
 {

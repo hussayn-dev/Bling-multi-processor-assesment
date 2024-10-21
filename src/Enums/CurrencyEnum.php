@@ -1,6 +1,6 @@
 <?php
 
-namespace Bling\Assessment\Enums;
+namespace HussDev\Assessment\Enums;
 
 enum CurrencyEnum: string
 {

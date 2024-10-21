@@ -1,9 +1,9 @@
 <?php
 
 
-namespace Bling\Assessment\Traits;
+namespace HussDev\Assessment\Traits;
 
-use Bling\Assessment\Exceptions\InvalidCurrencyCode;
+use HussDev\Assessment\Exceptions\InvalidCurrencyCode;
 use League\ISO3166\ISO3166;
 
 trait ValidateCurrency

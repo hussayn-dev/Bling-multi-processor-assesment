@@ -1,13 +1,13 @@
 <?php
 
-namespace Bling\Assessment\Manager;
+namespace HussDev\Assessment\Manager;
 
-use Bling\Assessment\Contracts\PaymentContract;
-use Bling\Assessment\Data\PaymentRequest;
-use Bling\Assessment\Data\PaymentResponse;
-use Bling\Assessment\Exceptions\PaymentServiceException;
-use Bling\Assessment\Traits\GetProcessor;
-use Bling\Assessment\Traits\ValidateCurrency;
+use HussDev\Assessment\Contracts\PaymentContract;
+use HussDev\Assessment\Data\PaymentRequest;
+use HussDev\Assessment\Data\PaymentResponse;
+use HussDev\Assessment\Exceptions\PaymentServiceException;
+use HussDev\Assessment\Traits\GetProcessor;
+use HussDev\Assessment\Traits\ValidateCurrency;
 
 
 class PaymentProcessor

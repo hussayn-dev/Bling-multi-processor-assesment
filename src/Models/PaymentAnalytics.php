@@ -1,6 +1,6 @@
 <?php
 
-namespace Bling\Assessment\Models;
+namespace HussDev\Assessment\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;

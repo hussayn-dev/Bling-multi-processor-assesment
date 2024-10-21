@@ -1,12 +1,12 @@
 <?php
 
-namespace Bling\Assessment\Manager;
+namespace HussDev\Assessment\Manager;
 
-use Bling\Assessment\Contracts\PaymentContract;
-use Bling\Assessment\Data\PaymentRequest;
-use Bling\Assessment\Data\PaymentResponse;
-use Bling\Assessment\Enums\PaymentStatus;
-use Bling\Assessment\Models\PaymentAnalytics;
+use HussDev\Assessment\Contracts\PaymentContract;
+use HussDev\Assessment\Data\PaymentRequest;
+use HussDev\Assessment\Data\PaymentResponse;
+use HussDev\Assessment\Enums\PaymentStatus;
+use HussDev\Assessment\Models\PaymentAnalytics;
 
 abstract class AbstractPaymentManager implements PaymentContract
 {

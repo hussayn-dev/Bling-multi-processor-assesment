@@ -1,6 +1,6 @@
 <?php
 
-namespace Bling\Assessment\Exceptions;
+namespace HussDev\Assessment\Exceptions;
 
 use Exception;
 

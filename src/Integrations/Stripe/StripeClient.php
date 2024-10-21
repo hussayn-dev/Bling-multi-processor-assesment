@@ -1,6 +1,6 @@
 <?php
 
-namespace Bling\Assessment\Integrations\Stripe;
+namespace HussDev\Assessment\Integrations\Stripe;
 
 
 class StripeClient

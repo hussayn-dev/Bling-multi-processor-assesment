@@ -1,11 +1,11 @@
 <?php
 
-namespace Bling\Assessment\Services;
+namespace HussDev\Assessment\Services;
 
-use Bling\Assessment\Data\PaymentRequest;
-use Bling\Assessment\Data\PaymentResponse;
-use Bling\Assessment\Integrations\PayPal\PayPalClient;
-use Bling\Assessment\Manager\AbstractPaymentManager;
+use HussDev\Assessment\Data\PaymentRequest;
+use HussDev\Assessment\Data\PaymentResponse;
+use HussDev\Assessment\Integrations\PayPal\PayPalClient;
+use HussDev\Assessment\Manager\AbstractPaymentManager;
 
 class PaypalService extends AbstractPaymentManager
 {

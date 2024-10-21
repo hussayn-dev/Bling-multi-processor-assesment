@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Bling\Assessment\Contracts;
 
-use Bling\Assessment\Data\PaymentRequest;
-use Bling\Assessment\Data\PaymentResponse;
+use HussDev\Assessment\Data\PaymentRequest;
+use HussDev\Assessment\Data\PaymentResponse;
 
 interface PaymentContract
 {

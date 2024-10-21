@@ -1,6 +1,6 @@
 <?php
 
-namespace Bling\Assessment\Data;
+namespace HussDev\Assessment\Data;
 
 use Spatie\LaravelData\Data;
 

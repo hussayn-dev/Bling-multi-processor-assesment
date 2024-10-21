@@ -1,6 +1,6 @@
 <?php
 
-namespace Bling\Assessment\Integrations\CoralPay;
+namespace HussDev\Assessment\Integrations\CoralPay;
 
 class CoralPayClient
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Bling\Assessment\Data;
+namespace HussDev\Assessment\Data;
 
-use Bling\Assessment\Enums\CurrencyEnum;
+use HussDev\Assessment\Enums\CurrencyEnum;
 use Spatie\LaravelData\Data;
 
 class PaymentRequest extends Data
