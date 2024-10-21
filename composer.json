@@ -1,5 +1,5 @@
 {
-  "name": "bling/assessment",
+  "name": "hussdev/assessment",
   "description": "A composer package for multi processor routing",
   "type": "package",
   "autoload": {
