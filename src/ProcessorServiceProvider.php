@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Permission;
+namespace HussDev\Assessment;
 
 use Illuminate\Support\ServiceProvider;
 
